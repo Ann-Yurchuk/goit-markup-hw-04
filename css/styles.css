@@ -115,7 +115,7 @@ html {
 }
    
 .nav-item {
-padding: 32px 0;
+  padding: 32px 0;
 }
 
 .nav-item,
@@ -150,7 +150,8 @@ padding: 32px 0;
 }
 
 .contact-links:focus,
-.contact-links:hover{
+.contact-links:hover,
+.contact-links.active {
     color: var(--accent-color);
 
 }
@@ -263,10 +264,21 @@ padding: 32px 0;
     flex-wrap: wrap;
 }
 
+.description-list {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+}
+.description-icon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
 
+}
 
 .description-link {
-    width: 270px;
+     width: 270px;
      margin-right: 30px;   
      
 }
@@ -275,13 +287,8 @@ padding: 32px 0;
     margin-right: 0px;
 }
 
-.description-list {
-    display: flex;   
-    justify-content: space-between;
-   
-   }
-  
 
+  
 
 .description-item {
     display: flex;
@@ -290,13 +297,14 @@ padding: 32px 0;
     width: 270px;
     height: 120px;
     margin-right: 30px;
-   margin-bottom: 30px;
+    margin-bottom: 30px;
     background-color: var(--bg-color);
     border-radius: 4px;
 }
 
 .description-item:last-child {
     margin-right: 0px;
+    margin-left: 0;
 }
 
 
@@ -418,6 +426,11 @@ padding: 32px 0;
     fill: currentColor;
 }
 
+.social-media-link.active, 
+.footer-media-link.active {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
 
 /* Customer */
 
@@ -449,7 +462,7 @@ padding: 32px 0;
 }
 
 .customer-item {
-       margin-right: 30px;
+    margin-right: 30px;
 }
 
 .customer-item:nth-child(6n) {
@@ -472,13 +485,18 @@ padding: 32px 0;
 .customer-media-link:focus,
 .customer-media-link:hover {
     color: var(--accent-color);
+    border: 1px solid var(--accent-color);
 }
 
+.customer-media-link.active {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
 
-      .customer-media-icon {
+.customer-media-icon {
       fill: currentColor;
         }
-
+ 
 
 /* footer */
 
@@ -500,6 +518,10 @@ padding: 32px 0;
 
 .footer-container {
     display: flex;
+}
+
+.footer-contakt {
+    margin-right: 70px;
 }
 
 
@@ -537,16 +559,9 @@ padding: 32px 0;
     margin-bottom: 20px;
 }
 
-.footer-social {
-    /* display: flex; */
-    
-}
-
 .footer-social-link {
     display: flex;
-    flex-wrap: wrap;
     width: 206px;
-
 }
 
 
@@ -571,7 +586,6 @@ padding: 32px 0;
 
 .footer-media-icon {
     fill: currentColor;
-
 }
 
 
@@ -641,6 +655,7 @@ padding: 32px 0;
     margin-bottom: 0px;
 }
 
-.card-link:hover {
+.card-link:hover,
+.card-link.active {
  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
